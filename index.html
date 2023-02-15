@@ -1,13 +1,30 @@
+<!DOCTYPE html>
 <html>
-<head>
-   <meta http-equiv=Content-Type content="text/html; charset=windows-1252">
+<meta http-equiv=Content-Type content="text/html; charset=windows-1252">
 </head>
 <body >
-   <h1>My Deep Link Test page</h1>
-   <p><a href="unitydl://mylink?scene1">Launch</a></p>
-   <p><a href="unitydl://mylink?scene2">Launch with Parameter</a></p>
-   <p><a href="unitydl://www.edubite.discussionpage.com">Launch with Link</a></p>
+   <h1>Deep Link Edubite Testing</h1>
+   <button  id = "DiscussionPageLink"> View Discussion</button>
+   <p> <a id="page1" href="unitydl://mylink?Discussion/SinglePage/160">Launch with Parameter</a> </p>
+    <button onclick="replaceLocation()">
+    Replace current webpage
+    </button>
 
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
 
+        const queryString = window.location.search;
+
+        const urlParams = new URLSearchParams(queryString);
+
+        const id = urlParams.get('id')
+
+        const location = "https://stackoverflow.com/questions/22607150/getting-the-url-parameters-inside-the-html-page"
+
+        let btn = document.getElementById('DiscussionPageLink')
+        btn.click(window.location.replace(location))
+        console.log("clicked")
+     </script>
 </body>
+  
 </html>
