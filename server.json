@@ -1,0 +1,21 @@
+{
+  "machine_name": "Production_Unit_01",
+  "ip_addresses": [
+    "192.168.1.101",
+    "192.168.1.102"
+  ],
+  "temperature_sensors": [
+    {
+      "sensor_id": "temp_sensor_01",
+      "temperature_c": 25.3
+    },
+    {
+      "sensor_id": "temp_sensor_02",
+      "temperature_c": 27.8
+    }
+  ],
+  "mac_addresses": [
+    "00:1A:2B:3C:4D:5E",
+    "00:1A:2B:3C:4D:5F"
+  ]
+}
